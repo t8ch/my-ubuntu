@@ -34,8 +34,7 @@ ipython kernel install
 source activate py3
 ipython kernel install
 ```
-- choose between kernels in jupyter notebooks: https://stackoverflow.com/questions/30492623/using-both-python-2-x-and-python-3-x-in-ipython-notebook
-- migrating conda envs: https://stackoverflow.com/questions/41274007/anaconda-export-environment-file
+- choose between kernels in jupyter notebooks: https://stackoverflow.com/a/30492913
 - jupytext: edit notebooks in custom editor (https://github.com/mwouts/jupytext)
   - integrate pip installation in conda env: https://www.puzzlr.org/install-packages-pip-conda-environment/
 
