@@ -11,6 +11,7 @@ my costumized configurations and settings for ubuntu
 - pdfpc
 - jabref
 - jupyter notebook plus extensions (TOC, multiple cursors, ...)
+- add hibernation (https://askubuntu.com/questions/768136/how-can-i-hibernate-on-ubuntu-16-04)
 
 ## smb.conf needs changes (sometimes)
 protocol = SMB2
@@ -21,7 +22,7 @@ see  my-ubuntu/init.el
 includes multiple lines editing (https://stackoverflow.com/questions/761706/in-emacs-edit-multiple-lines-at-once)
 
 ## python, anaconda and conda
-parallel python 2 and 3 installations as environments (from https://github.com/jupyter/jupyter/issues/71#issuecomment-159927298 )
+- parallel python 2 and 3 installations as environments (from https://github.com/jupyter/jupyter/issues/71#issuecomment-159927298 )
 ```
 # install everything (except JupyterHub itself) with Python 2 and 3. Jupyter is included in Anaconda.
 conda create -n py3 python=3 anaconda
@@ -33,18 +34,11 @@ ipython kernel install
 source activate py3
 ipython kernel install
 ```
-Import conda envs https://stackoverflow.com/questions/41274007/anaconda-export-environment-file
-preparing hidrive for unison: https://hilkosblog.wordpress.com/2017/09/24/hidrive-synchronisieren-mit-nas/
+- choose between kernels in jupyter notebooks: https://stackoverflow.com/questions/30492623/using-both-python-2-x-and-python-3-x-in-ipython-notebook
+- migrating conda envs: https://stackoverflow.com/questions/41274007/anaconda-export-environment-file
+- jupytext: edit notebooks in custom editor (https://github.com/mwouts/jupytext)
+  - integrate pip installation in conda env: https://www.puzzlr.org/install-packages-pip-conda-environment/
 
-backup /etc/ , too
-auctex autocomplete
-textext (inkscape plugin)
-Jupyter kernels
-
-
-
-https://www.omgubuntu.co.uk/2016/08/use-google-drive-ubuntu-16-04-linux-desktops
-add hibernation (https://askubuntu.com/questions/768136/how-can-i-hibernate-on-ubuntu-16-04)
-
-
-Emacs config
+## mount HiDrive and google drive as network file systems
+- hidrive: https://hilkosblog.wordpress.com/2017/09/24/hidrive-synchronisieren-mit-nas/
+- google: https://www.omgubuntu.co.uk/2016/08/use-google-drive-ubuntu-16-04-linux-desktops
