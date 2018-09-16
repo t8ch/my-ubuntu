@@ -43,13 +43,62 @@
 (load-theme 'material t) ;; load material theme
 (global-linum-mode t) ;; enable line numbers globally
 
+(electric-pair-mode)  ;; AUTOPAIR PARANTHESES
+(add-hook 'LaTeX-mode-hook
+'(lambda ()
+(define-key LaTeX-mode-map (kbd "$") 'self-insert-command)))
+; Make Emacs highlight paired parentheses
+(show-paren-mode 1)
+
+; move lines
+(defun move-line-up ()
+  "Move up the current line."
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2)
+  (indent-according-to-mode))
+
+(defun move-line-down ()
+  "Move down the current line."
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(global-set-key [(meta up)]  'move-line-up)
+(global-set-key [(meta down)]  'move-line-down)
+
+
 ;; PYTHON CONFIGURATION
 ;; --------------------------------------
 
 ;;; add path to python (need package as loaded above)
 (exec-path-from-shell-copy-env "PATH")
 (elpy-enable)
-(elpy-use-ipython)
+;(elpy-use-ipython)
+
+
+;;
+;;IPYTHON config
+;;
+(setq
+ python-shell-interpreter "ipython"
+ python-shell-interpreter-args ""
+ python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+ python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+ python-shell-completion-setup-code
+   "from IPython.core.completerlib import module_completion"
+; python-shell-completion-module-string-code
+;   "';'.join(module_completion('''%s'''))\n"
+ python-shell-completion-string-code
+   "';'.join(get_ipython().Completer.all_completions('''%s'''))\n"
+)
+
+;(setq python-shell-completion-string-code
+;      "';'.join(__IP.complete('''%s'''))\n"
+;      python-shell-completion-module-string-code "")
+
 
 ;JEDI for python and elpy
 (setq elpy-rpc-backend "jedi")  
@@ -76,7 +125,7 @@
 (require 'py-autopep8)
 (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;CYTHON MODE
 (require 'cython-mode)
 
@@ -91,8 +140,8 @@
 (setq ido-enable-flex-matching t
       ido-use-virtual-buffers t)
 
-;;
-;;recent files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; RECENT FILES
 ;;
 (require 'recentf)
 (recentf-mode 1)
@@ -103,8 +152,14 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;;;;;;;;;;;;;;;;        LaTeX         ;;;;;;;;;;;;;;;;;
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; REFTEX AND AUCTEX
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;RefTex
 (require 'reftex)
 (add-hook 'LaTeX-mode-hook 'reftex-mode)   ; with AUCTeX LaTeX mode
@@ -124,12 +179,23 @@
  '(TeX-source-correlate-mode t)
  '(TeX-source-correlate-start-server t)
  '(TeX-view-program-list (quote (("Okular" "okular -unique %o#src:%n%b"))))
- '(TeX-view-program-selection (quote ((output-pdf "Okular") (engine-omega "dvips and gv") (output-dvi "xdvi") (output-pdf "xpdf") (output-html "xdg-open"))))
+ '(TeX-view-program-selection
+   (quote
+    ((output-pdf "Okular")
+     (engine-omega "dvips and gv")
+     (output-dvi "xdvi")
+     (output-pdf "xpdf")
+     (output-html "xdg-open"))))
  '(browse-url-browser-function (quote browse-url-firefox))
  '(browse-url-firefox-new-window-is-tab t)
- '(browse-url-generic-program "\"firefox\"") )
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ '(browse-url-generic-program "\"firefox\"")
+ '(package-selected-packages
+   (quote
+    (dh-elpa use-package py-autopep8 pandoc-mode multiple-cursors material-theme markdown-mode helm-projectile flycheck fill-column-indicator exec-path-from-shell ess elpy ein cython-mode company-jedi better-defaults auctex)))
+ '(python-shell-interpreter "ipython2"))
 
+
+;;; PROJECTILE
 ;; projectile (nicer file browsing)
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
@@ -172,4 +238,3 @@
 
 
 ;; init.el ends here
-
