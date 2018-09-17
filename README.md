@@ -7,7 +7,7 @@ my costumized configurations and settings for ubuntu
 - synapse
 - inkscape (incl textext)
 - tlp (https://askubuntu.com/questions/285434/is-there-a-power-saving-application-similar-to-jupiter)
-- okular
+- okular (to make work with emacs: go to the "Settings" menu, item "Configure Okular", "Editor", select Emacs client.)
 - pdfpc
 - jabref
 - jupyter notebook plus extensions (TOC, multiple cursors, ...)
