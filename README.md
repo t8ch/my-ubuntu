@@ -10,6 +10,7 @@ my costumized configurations and settings for ubuntu
 - okular (to make work with emacs: go to the "Settings" menu, item "Configure Okular", "Editor", select Emacs client.)
 - pdfpc
 - jabref
+- gimp and g'mic (http://ubuntuhandbook.org/index.php/2017/06/install-gmic-2-0-via-ppa-in-ubuntu-16-04-14-04-higher/)
 - jupyter notebook plus extensions (TOC, multiple cursors, ...)
 - add hibernation (https://askubuntu.com/questions/768136/how-can-i-hibernate-on-ubuntu-16-04)
 
