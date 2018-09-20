@@ -38,6 +38,7 @@ ipython kernel install
 - choose between kernels in jupyter notebooks: https://stackoverflow.com/a/30492913
 - jupytext: edit notebooks in custom editor (https://github.com/mwouts/jupytext)
   - integrate pip installation in conda env: https://www.puzzlr.org/install-packages-pip-conda-environment/
+  - possibly run "conda install nb_conda_kernels" afterwards
 
 ## mount HiDrive and google drive as network file systems
 - hidrive: https://hilkosblog.wordpress.com/2017/09/24/hidrive-synchronisieren-mit-nas/
