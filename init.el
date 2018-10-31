@@ -70,6 +70,9 @@
 (global-set-key [(meta down)]  'move-line-down)
 
 
+;;; MARKDOWN
+(setq markdown-command "/home/herfurtht/miniconda3/bin/pandoc")
+
 ;; PYTHON CONFIGURATION
 ;; --------------------------------------
 
