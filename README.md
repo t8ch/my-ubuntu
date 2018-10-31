@@ -19,7 +19,7 @@ protocol = SMB2
 
 
 ## emacs config
-see  [https://github.com/t8ch/my-ubuntu/edit/master/init.el](init.el)
+see [init.el](https://github.com/t8ch/my-ubuntu/edit/master/init.el)
 includes multiple lines editing (https://stackoverflow.com/questions/761706/in-emacs-edit-multiple-lines-at-once)
 
 ## python, anaconda and conda
