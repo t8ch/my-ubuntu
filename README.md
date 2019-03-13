@@ -40,7 +40,7 @@ ipython kernel install
 - jupytext: edit notebooks in custom editor (https://github.com/mwouts/jupytext)
   - integrate pip installation in conda env: https://www.puzzlr.org/install-packages-pip-conda-environment/
   - possibly run "conda install nb_conda_kernels" afterwards
-- some other modifications that seem to be necessary when installing new environment (example tf2-alpha)
+- some other modifications that seem to be necessary when installing new environment, except installing packages in general (example tf2-alpha)
 ```
 conda create -n tf2 pip python=3.6
 source activate tf2
