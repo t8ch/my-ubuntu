@@ -40,6 +40,18 @@ ipython kernel install
 - jupytext: edit notebooks in custom editor (https://github.com/mwouts/jupytext)
   - integrate pip installation in conda env: https://www.puzzlr.org/install-packages-pip-conda-environment/
   - possibly run "conda install nb_conda_kernels" afterwards
+- some other modifications that seem to be necessary when installing new environment (example tf2-alpha)
+```
+conda create -n tf2 pip python=3.6
+source activate tf2
+
+pip install tf-nightly-2.0-preview tfp-nightly
+
+python -m ipykernel install --user --name myenv
+
+conda install -c conda-forge jupytext
+conda install nbconvert notebook
+```
 
 ## mount HiDrive and google drive as network file systems
 - hidrive: https://hilkosblog.wordpress.com/2017/09/24/hidrive-synchronisieren-mit-nas/
