@@ -52,6 +52,7 @@ python -m ipykernel install --user --name myenv
 conda install -c conda-forge jupytext
 conda install nbconvert notebook
 ```
+  - seems like jupytext must be (re)installed (see above) for notebook functionality
 
 ## mount HiDrive and google drive as network file systems
 - hidrive: https://hilkosblog.wordpress.com/2017/09/24/hidrive-synchronisieren-mit-nas/
