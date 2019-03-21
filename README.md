@@ -14,6 +14,9 @@ my costumized configurations and settings for ubuntu
   - beautify: https://github.com/hejiann/beautify/blob/master/README (and https://askubuntu.com/questions/1073833/unable-to-install-beautify-plugin-in-gimp-2-10-6 for installation)
 - jupyter notebook plus extensions (TOC, multiple cursors, ...)
 - add hibernation (https://askubuntu.com/questions/768136/how-can-i-hibernate-on-ubuntu-16-04)
+- Zotero for documents and references
+  - installation: https://askubuntu.com/a/332117
+  - BibTex add-on: https://retorque.re/zotero-better-bibtex/installation/
 
 ## smb.conf needs changes (sometimes)
 protocol = SMB2
