@@ -12,7 +12,6 @@ my costumized configurations and settings for ubuntu
 - jabref
 - gimp and g'mic (http://ubuntuhandbook.org/index.php/2017/06/install-gmic-2-0-via-ppa-in-ubuntu-16-04-14-04-higher/)
   - beautify: https://github.com/hejiann/beautify/blob/master/README (and https://askubuntu.com/questions/1073833/unable-to-install-beautify-plugin-in-gimp-2-10-6 for installation)
-- jupyter notebook plus extensions (TOC, multiple cursors, ...)
 - add hibernation (https://askubuntu.com/questions/768136/how-can-i-hibernate-on-ubuntu-16-04)
 - Zotero for documents and references
   - installation: https://askubuntu.com/a/332117
@@ -39,10 +38,11 @@ ipython kernel install
 source activate py3
 ipython kernel install
 ```
+- jupyter notebook extensions ```conda install -c conda-forge jupyter_contrib_nbextensions```
 - choose between kernels in jupyter notebooks: https://stackoverflow.com/a/30492913
 - jupytext: edit notebooks in custom editor (https://github.com/mwouts/jupytext)
-  - integrate pip installation in conda env: https://www.puzzlr.org/install-packages-pip-conda-environment/
-  - possibly run "conda install nb_conda_kernels" afterwards
+- integrate pip installation in conda env: https://www.puzzlr.org/install-packages-pip-conda-environment/
+- possibly run "conda install nb_conda_kernels" afterwards
 - some other modifications that seem to be necessary when installing new environment, except installing packages in general (example tf2-alpha)
 ```
 conda create -n tf2 pip python=3.6
