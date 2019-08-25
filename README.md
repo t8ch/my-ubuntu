@@ -56,6 +56,11 @@ conda install -c conda-forge jupytext
 conda install nbconvert notebook
 ```
 - seems like jupytext must be (re)installed (see above) for notebook functionality
+- jupyter lab
+  - extensions in general ```conda install -c conda-forge nodejs```<br>
+  https://jupyterlab.readthedocs.io/en/stable/user/extensions.html
+  - plotly extensions https://github.com/plotly/plotly.py#jupyterlab-support-python-35
+  
 - **recently (Aug 2019), installing new libs in conda broke it entirely, requiring a new installation**<br>
 https://github.com/conda/conda/issues/2463
 
